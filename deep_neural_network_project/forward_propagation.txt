@@ -1,0 +1,12 @@
+ Linear Forward
+Now that you have initialized your parameters, you can do the forward propagation module. 
+Start by implementing some basic functions that you can use again later when implementing the model. 
+Now, you'll complete three functions in this order:
+
+LINEAR
+LINEAR -> ACTIVATION where ACTIVATION will be either ReLU or Sigmoid.
+[LINEAR -> RELU]  ×  (L-1) -> LINEAR -> SIGMOID (whole model)
+The linear forward module (vectorized over all the examples) computes the following equations:
+
+𝑍[𝑙]=𝑊[𝑙]𝐴[𝑙−1]+𝑏[𝑙]
+where  𝐴[0]=𝑋 .
