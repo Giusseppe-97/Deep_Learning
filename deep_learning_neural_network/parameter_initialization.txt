@@ -1,0 +1,13 @@
+You will write two helper functions to initialize the parameters for your model. 
+The first function will be used to initialize parameters for a two layer model. 
+The second one generalizes this initialization process to  𝐿  layers.
+
+
+1. initialize_parameters
+Create and initialize the parameters of the 2-layer neural network.
+
+Instructions:
+
+The model's structure is: LINEAR -> RELU -> LINEAR -> SIGMOID.
+Use this random initialization for the weight matrices: np.random.randn(shape)*0.01 with the correct shape
+Use zero initialization for the biases: np.zeros(shape)
