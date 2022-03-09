@@ -1,0 +1,12 @@
+L_model_forward
+Implement the forward propagation of the above model.
+
+Instructions: In the code below, the variable AL will denote  𝐴[𝐿]=𝜎(𝑍[𝐿])=𝜎(𝑊[𝐿]𝐴[𝐿−1]+𝑏[𝐿]). 
+(This is sometimes also called Yhat, i.e., this is  𝑌̂  .)
+
+Hints:
+
+Use the functions you've previously written
+Use a for loop to replicate [LINEAR->RELU] (L-1) times
+Don't forget to keep track of the caches in the "caches" list. 
+To add a new value c to a list, you can use list.append(c).
