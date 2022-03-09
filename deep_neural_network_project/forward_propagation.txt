@@ -1,4 +1,5 @@
- Linear Forward
+Forward Propagation Module
+1.1 Linear Forward
 Now that you have initialized your parameters, you can do the forward propagation module. 
 Start by implementing some basic functions that you can use again later when implementing the model. 
 Now, you'll complete three functions in this order:
@@ -10,3 +11,20 @@ The linear forward module (vectorized over all the examples) computes the follow
 
 𝑍[𝑙]=𝑊[𝑙]𝐴[𝑙−1]+𝑏[𝑙]
 where  𝐴[0]=𝑋 .
+
+1.2 Linear-Activation Forward
+In this notebook, you will use two activation functions:
+
+Sigmoid: 𝜎(𝑍)=𝜎(𝑊𝐴+𝑏)=11+𝑒−(𝑊𝐴+𝑏). 
+You've been provided with the sigmoid function which returns two items: the activation value "a" and a "cache" that contains "Z" 
+(it's what we will feed in to the corresponding backward function). To use it you could just call:
+
+A, activation_cache = sigmoid(Z)
+ReLU: The mathematical formula for ReLu is 𝐴=𝑅𝐸𝐿𝑈(𝑍)=𝑚𝑎𝑥(0,𝑍). 
+You've been provided with the relu function. 
+This function returns two items: the activation value "A" and a "cache" that contains "Z" 
+(it's what you'll feed in to the corresponding backward function). To use it you could just call:
+
+A, activation_cache = relu(Z)
+For added convenience, you're going to group two functions (Linear and Activation) into one function (LINEAR->ACTIVATION). 
+Hence, you'll implement a function that does the LINEAR forward step, followed by an ACTIVATION forward step.
