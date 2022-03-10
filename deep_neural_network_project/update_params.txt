@@ -1,0 +1,8 @@
+Update Parameters
+In this section, you'll update the parameters of the model, using gradient descent:
+
+𝑊[𝑙]=𝑊[𝑙]−𝛼 𝑑𝑊[𝑙](16)
+𝑏[𝑙]=𝑏[𝑙]−𝛼 𝑑𝑏[𝑙](17)
+where  𝛼  is the learning rate.
+
+After computing the updated parameters, store them in the parameters dictionary.
