@@ -82,14 +82,11 @@ def update_parameters(params, grads, learning_rate):
     parameters = params.copy()
     L = len(parameters) // 2  # number of layers in the neural network
 
-    # Update rule for each parameter. Use a for loop.
-    # (≈ 2 lines of code)
+    # Update rule for each parameter.
     for l in range(L):
         parameters["W" + str(l+1)] = parameters["W" + str(l+1)] - \
             (grads["dW" + str(l + 1)])*learning_rate
         parameters["b" + str(l+1)] = parameters["b" + str(l+1)] - \
             (grads["db" + str(l + 1)])*learning_rate
-        # YOUR CODE STARTS HERE
 
-        # YOUR CODE ENDS HERE
     return parameters
