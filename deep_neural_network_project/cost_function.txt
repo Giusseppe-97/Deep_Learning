@@ -1,0 +1,8 @@
+Cost Function
+Now you can implement forward and backward propagation! 
+You need to compute the cost, in order to check whether your model is actually learning.
+
+
+Exercise 6 - compute_cost
+Compute the cross-entropy cost 𝐽, using the following formula:
+−1𝑚∑𝑖=1𝑚(𝑦(𝑖)log(𝑎[𝐿](𝑖))+(1−𝑦(𝑖))log(1−𝑎[𝐿](𝑖)))
