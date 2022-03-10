@@ -1,0 +1,28 @@
+ Linear Backward
+For layer  𝑙 , the linear part is:  𝑍[𝑙]=𝑊[𝑙]𝐴[𝑙−1]+𝑏[𝑙]  (followed by an activation).
+
+Suppose you have already calculated the derivative  𝑑𝑍[𝑙]=∂∂𝑍[𝑙] . 
+You want to get  (𝑑𝑊[𝑙],𝑑𝑏[𝑙],𝑑𝐴[𝑙−1]) .
+
+
+Figure Linear Backward
+The three outputs  (𝑑𝑊[𝑙],𝑑𝑏[𝑙],𝑑𝐴[𝑙−1])  are computed using the input  𝑑𝑍[𝑙] .
+
+Here are the formulas you need:
+𝑑𝑊[𝑙]=∂∂𝑊[𝑙]=1𝑚𝑑𝑍[𝑙]𝐴[𝑙−1]𝑇(8)
+𝑑𝑏[𝑙]=∂∂𝑏[𝑙]=1𝑚∑𝑖=1𝑚𝑑𝑍[𝑙](𝑖)(9)
+𝑑𝐴[𝑙−1]=∂∂𝐴[𝑙−1]=𝑊[𝑙]𝑇𝑑𝑍[𝑙](10)
+𝐴[𝑙−1]𝑇  is the transpose of  𝐴[𝑙−1] .
+
+Linear-Activation Backward¶
+Next, you will create a function that merges the two helper functions: 
+linear_backward and the backward step for the activation linear_activation_backward.
+
+To help you implement linear_activation_backward, two backward functions have been provided:
+
+sigmoid_backward: Implements the backward propagation for SIGMOID unit. You can call it as follows:
+dZ = sigmoid_backward(dA, activation_cache)
+relu_backward: Implements the backward propagation for RELU unit. You can call it as follows:
+dZ = relu_backward(dA, activation_cache)
+If 𝑔(.) is the activation function, sigmoid_backward and relu_backward compute
+𝑑𝑍[𝑙]=𝑑𝐴[𝑙]∗𝑔′(𝑍[𝑙])
