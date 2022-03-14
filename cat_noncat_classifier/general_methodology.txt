@@ -1,0 +1,6 @@
+Deep Learning methodology to build the model:
+
+Initialize parameters / Define hyperparameters
+Loop for num_iterations: a. Forward propagation b. Compute cost function c. Backward propagation d. Update parameters (using parameters, and grads from backprop)
+Use trained parameters to predict labels
+Implement the two models!
